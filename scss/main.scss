@@ -1,0 +1,226 @@
+// some regular value
+
+$color: white;
+$transition-time: 0.4s;
+$hover-color: #456dff;
+$bgd-color: #345600; // bgd:=background-color
+$spacing-padding: 2em;
+
+// part of css
+
+/* =============================================
+   general setup
+   ============================================= */
+
+/* =============================================
+   html
+   ============================================= */
+
+html {
+    box-sizing: border-box;
+
+}
+
+/* =============================================
+   body
+   ============================================= */
+
+body {
+    box-sizing: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+/* =============================================
+   all elements
+   ============================================= */
+
+*,
+*::before,
+*::after {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* =============================================
+   for small screen
+   ============================================= */
+
+/* =============================================
+   .body-navbar-btn
+   ============================================= */
+
+.body-navbar-btn {
+    display: none;
+}
+
+.body-navbar-btn:checked ~ .body-navbar-btn-label > .body-navbar-icn {
+    background: transparent;
+    transition: $transition-time;
+}
+
+.body-navbar-btn:checked ~ .body-navbar-btn-label > .body-navbar-icn::before {
+    top: 0;
+    transform: rotate(-35deg);
+    transition: $transition-time;
+}
+
+.body-navbar-btn:checked ~ .body-navbar-btn-label > .body-navbar-icn::after {
+    top: 0;
+    transform: rotate(35deg);
+    transition: $transition-time;
+}
+
+.body-navbar-btn:checked ~ .body-navbar {
+    display: block;
+}
+
+/* =============================================
+   body-header
+   ============================================= */
+
+.body-header {
+    background: $bgd-color;
+    padding: $spacing-padding;
+}
+
+/* =============================================
+   logo
+   ============================================= */
+
+.logo {
+    color: $color;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* =============================================
+   body-navbar-btn-label
+   ============================================= */
+
+.body-navbar-btn-label {
+    position: absolute;
+    top: 2.5em;
+    right: $spacing-padding;
+}
+
+/* =============================================
+   body-navbar-icn
+   ============================================= */
+
+.body-navbar-icn {
+    display: block;
+    position: relative;
+    width: 2em;
+    height: 0.2em;
+    border-radius: 1em;
+    background: $color;
+    transition: $transition-time;
+}
+
+.body-navbar-icn::before,
+.body-navbar-icn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+    background: $color;
+    transition: $transition-time;
+}
+
+.body-navbar-icn::before {
+    top: -0.5em;
+}
+
+.body-navbar-icn::after {
+    top: 0.5em;
+}
+
+/* =============================================
+   body-navbar
+   ============================================= */
+
+.body-navbar {
+    display: none;
+    background: $bgd-color;
+    padding: $spacing-padding;
+}
+
+/* =============================================
+   navbar-link
+   ============================================= */
+
+.navbar-link {
+    display: block;
+    color: $color;
+    padding: $spacing-padding;
+    width: 4em;
+}
+
+.navbar-link:hover {
+    background: $hover-color;
+    border-radius: 4em;
+    transition: $transition-time;
+}
+
+@media only screen and(min-width: 40em) {
+
+/* =============================================
+   body-navbar-btn
+   ============================================= */
+
+    .body-navbar-btn:checked ~ .body-navbar {
+        display: flex;
+    }
+
+/* =============================================
+   header-nav-wrapper
+   ============================================= */
+
+   .header-navbar-wrapper {
+       display: flex;
+   }
+
+/* =============================================
+   body-navbar-btn-label
+   ============================================= */
+
+    .body-navbar-btn-label {
+        display: none;
+    }
+
+/* =============================================
+   body-header
+   ============================================= */
+
+    .body-header {
+        float: left;
+        width: 5vw;
+    }
+
+/* =============================================
+   body-navbar
+   ============================================= */
+
+    .body-navbar {
+        display: flex;
+        width: 95vw;
+        float: right;
+        padding: 0;
+        justify-content: right;
+    }
+    
+/* =============================================
+   navbar-link
+   ============================================= */
+
+   .navbar-link {
+       display: block;
+       padding: $spacing-padding;
+   }
+
+}

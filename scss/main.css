@@ -7,6 +7,8 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 /* =============================================
@@ -15,6 +17,7 @@ html {
 body {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  font-size: 100%;
   height: 100%;
   width: 100%;
 }
@@ -132,9 +135,16 @@ body {
    body-navbar
    ============================================= */
 .body-navbar {
-  display: none;
   background: #345600;
-  padding: 2em;
+  padding: 2em 0;
+  display: none;
+}
+
+/* =============================================
+   body-navbar-list
+   ============================================= */
+.body-navbar-list {
+  text-align: center;
 }
 
 /* =============================================
@@ -143,8 +153,7 @@ body {
 .navbar-link {
   display: block;
   color: white;
-  padding: 2em;
-  width: 6em;
+  padding: 1em;
 }
 
 .navbar-link:hover {
@@ -154,19 +163,28 @@ body {
   transition: 0.4s;
 }
 
+/* =============================================
+   body-main
+   ============================================= */
+.body-main {
+  clear: both;
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* =============================================
+   body-footer
+   ============================================= */
+.body-footer {
+  clear: both;
+  text-align: center;
+}
+
 @media only screen and (min-width: 40em) {
   /* =============================================
    body-navbar-btn
    ============================================= */
-  .body-navbar-btn:checked ~ .body-navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  /* =============================================
-   header-nav-wrapper
-   ============================================= */
-  .header-navbar-wrapper {
+  .body-navbar-btn:checked ~ .body-navbar > .body-navbar-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -182,17 +200,25 @@ body {
    ============================================= */
   .body-header {
     float: left;
-    width: 5vw;
   }
   /* =============================================
    body-navbar
    ============================================= */
   .body-navbar {
+    display: block;
+    width: 100%;
+    padding: 0;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  /* =============================================
+   body-navbar
+   ============================================= */
+  .body-navbar-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 95vw;
-    padding: 0;
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;

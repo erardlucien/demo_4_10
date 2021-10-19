@@ -18,7 +18,8 @@ $spacing-padding: 2em;
 
 html {
     box-sizing: border-box;
-
+    width: 100%;
+    height: 100%;
 }
 
 /* =============================================
@@ -27,6 +28,7 @@ html {
 
 body {
     box-sizing: inherit;
+    font-size: 100%;
     height: 100%;
     width: 100%;
 }
@@ -145,9 +147,17 @@ body {
    ============================================= */
 
 .body-navbar {
-    display: none;
     background: $bgd-color;
-    padding: $spacing-padding;
+    padding: $spacing-padding 0;
+    display: none;
+}
+
+/* =============================================
+   body-navbar-list
+   ============================================= */
+
+.body-navbar-list {
+    text-align: center;
 }
 
 /* =============================================
@@ -157,8 +167,7 @@ body {
 .navbar-link {
     display: block;
     color: $color;
-    padding: $spacing-padding;
-    width: 6em;
+    padding: $spacing-padding - 1em;
 }
 
 .navbar-link:hover {
@@ -167,23 +176,34 @@ body {
     transition: $transition-time;
 }
 
+/* =============================================
+   body-main
+   ============================================= */
+
+.body-main {
+    clear: both;
+    text-align: center;
+    margin: 1em 0;
+}
+
+/* =============================================
+   body-footer
+   ============================================= */
+
+.body-footer {
+    clear: both;
+    text-align: center;
+}
+
 @media only screen and(min-width: 40em) {
 
 /* =============================================
    body-navbar-btn
    ============================================= */
 
-    .body-navbar-btn:checked ~ .body-navbar {
+    .body-navbar-btn:checked ~ .body-navbar > .body-navbar-list{
         display: flex;
     }
-
-/* =============================================
-   header-nav-wrapper
-   ============================================= */
-
-   .header-navbar-wrapper {
-       display: flex;
-   }
 
 /* =============================================
    body-navbar-btn-label
@@ -199,7 +219,6 @@ body {
 
     .body-header {
         float: left;
-        width: 5vw;
     }
 
 /* =============================================
@@ -207,12 +226,21 @@ body {
    ============================================= */
 
     .body-navbar {
-        display: flex;
-        width: 95vw;
+        display: block;
+        width: 100%;
         padding: 0;
         justify-content: right;
     }
-    
+
+/* =============================================
+   body-navbar
+   ============================================= */
+
+   .body-navbar-list {
+       display: flex;
+       justify-content: right;
+   }
+
 /* =============================================
    navbar-link
    ============================================= */

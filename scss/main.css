@@ -180,6 +180,9 @@ body {
   text-align: center;
 }
 
+/* =============================================
+   for screen 40em
+   ============================================= */
 @media only screen and (min-width: 40em) {
   /* =============================================
    body-navbar-btn
@@ -229,6 +232,50 @@ body {
   .navbar-link {
     display: block;
     padding: 2em;
+  }
+}
+
+/* =============================================
+   for screen 80em
+   ============================================= */
+@media only screen and (min-width: 80em) {
+  /* =============================================
+   body-header
+   ============================================= */
+  .body-header {
+    float: none;
+  }
+  /* =============================================
+   body-navbar
+   ============================================= */
+  .body-navbar {
+    display: block;
+    width: 30%;
+    float: left;
+    height: 100vh;
+  }
+  /* =============================================
+   body-navbar-list
+   ============================================= */
+  .body-navbar-list {
+    display: block;
+  }
+  /* =============================================
+   body-main
+   ============================================= */
+  .body-main {
+    float: left;
+    width: 50%;
+    clear: none;
+  }
+  /* =============================================
+   body-footer
+   ============================================= */
+  .body-footer {
+    background: #345600;
+    color: white;
+    padding: 2em;
+    clear: both;
   }
 }
 /*# sourceMappingURL=main.css.map */

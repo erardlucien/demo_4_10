@@ -267,6 +267,7 @@ body {
 
 .body-header {
     float: none;
+    width: 5%;
 }
 
 /* =============================================
@@ -275,7 +276,7 @@ body {
 
 .body-navbar {
     display: block;
-    width: 30%;
+    width: 10%;
     float: left;
     height: 100vh;
 }
@@ -294,7 +295,7 @@ body {
 
 .body-main {
     float: left;
-    width: 50%;
+    width: 90%;
     clear: none;
 }
 
@@ -303,10 +304,10 @@ body {
    ============================================= */
 
 .body-footer {
-    background: $bgd-color;
-    color: $color;
+    position: relative;
     padding: $spacing-padding;
-    clear: both;
+    top: 77vh;
+    clear: right;
 }
 
 }

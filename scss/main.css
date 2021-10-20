@@ -244,13 +244,14 @@ body {
    ============================================= */
   .body-header {
     float: none;
+    width: 5%;
   }
   /* =============================================
    body-navbar
    ============================================= */
   .body-navbar {
     display: block;
-    width: 30%;
+    width: 10%;
     float: left;
     height: 100vh;
   }
@@ -265,17 +266,17 @@ body {
    ============================================= */
   .body-main {
     float: left;
-    width: 50%;
+    width: 90%;
     clear: none;
   }
   /* =============================================
    body-footer
    ============================================= */
   .body-footer {
-    background: #345600;
-    color: white;
+    position: relative;
     padding: 2em;
-    clear: both;
+    top: 77vh;
+    clear: right;
   }
 }
 /*# sourceMappingURL=main.css.map */

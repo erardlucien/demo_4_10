@@ -85,7 +85,6 @@ body {
 
 .body-header {
     background: $bgd-color;
-    padding: $spacing-padding;
 }
 
 /* =============================================
@@ -94,6 +93,7 @@ body {
 
 .logo {
     color: $color;
+    padding: $spacing-padding;
     font-weight: bold;
     font-style: italic;
 }
@@ -267,7 +267,7 @@ body {
 
 .body-header {
     float: none;
-    width: 5%;
+    width: 10vw;
 }
 
 /* =============================================
@@ -276,7 +276,7 @@ body {
 
 .body-navbar {
     display: block;
-    width: 10%;
+    width: 10vw;
     float: left;
     height: 100vh;
 }

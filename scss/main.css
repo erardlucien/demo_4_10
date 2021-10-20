@@ -75,7 +75,6 @@ body {
    ============================================= */
 .body-header {
   background: #345600;
-  padding: 2em;
 }
 
 /* =============================================
@@ -83,6 +82,7 @@ body {
    ============================================= */
 .logo {
   color: white;
+  padding: 2em;
   font-weight: bold;
   font-style: italic;
 }
@@ -244,14 +244,14 @@ body {
    ============================================= */
   .body-header {
     float: none;
-    width: 5%;
+    width: 10vw;
   }
   /* =============================================
    body-navbar
    ============================================= */
   .body-navbar {
     display: block;
-    width: 10%;
+    width: 10vw;
     float: left;
     height: 100vh;
   }

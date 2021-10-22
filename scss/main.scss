@@ -5,6 +5,10 @@ $transition-time: 0.4s;
 $hover-color: #456dff;
 $bgd-color: #345600; // bgd:=background-color
 $spacing-padding: 2em;
+$color1: red;
+$color2: lighten(green, 40%);
+$color3: darken(blue, 50%);
+$colorgroup: $color1, $color2, $color3;
 
 // part of css
 
@@ -192,6 +196,8 @@ body {
 
 .body-footer {
     clear: both;
+    position: relative;
+    top: 77vh;
     text-align: center;
 }
 
@@ -294,9 +300,10 @@ body {
    ============================================= */
 
 .body-main {
-    float: left;
+    position: relative;
+    top: 0;
     width: 90%;
-    clear: none;
+    clear: right;
 }
 
 /* =============================================
@@ -304,9 +311,7 @@ body {
    ============================================= */
 
 .body-footer {
-    position: relative;
-    padding: $spacing-padding;
-    top: 77vh;
+    width: 90%;
     clear: right;
 }
 

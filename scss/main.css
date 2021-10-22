@@ -1,3 +1,15 @@
+.text1 {
+  color: red;
+}
+
+.text2 {
+  color: #4dff4d;
+}
+
+.text3 {
+  color: #0000cc;
+}
+
 /* =============================================
    general setup
    ============================================= */
@@ -255,7 +267,7 @@ body {
     display: block;
     width: 10vw;
     float: left;
-    height: 100vh;
+    height: 120vh;
   }
   /* =============================================
    body-navbar-list

@@ -7,8 +7,14 @@ $bgd-color: #345600; // bgd:=background-color
 $spacing-padding: 2em;
 $color1: red;
 $color2: lighten(green, 40%);
-$color3: darken(blue, 50%);
-$colorgroup: $color1, $color2, $color3;
+$color3: darken(blue, 10%);
+$colorgroup: $color1 1, $color2 2, $color3 3;
+
+@each $text-color, $index in $colorgroup {
+    .text#{$index} {
+        color: $text-color;
+    }
+}
 
 // part of css
 
@@ -284,7 +290,7 @@ body {
     display: block;
     width: 10vw;
     float: left;
-    height: 100vh;
+    height: 120vh;
 }
 
 /* =============================================

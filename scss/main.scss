@@ -10,12 +10,6 @@ $color2: lighten(green, 40%);
 $color3: darken(blue, 10%);
 $colorgroup: $color1 1, $color2 2, $color3 3;
 
-@each $text-color, $index in $colorgroup {
-    .text#{$index} {
-        color: $text-color;
-    }
-}
-
 // part of css
 
 /* =============================================
@@ -54,6 +48,16 @@ body {
     text-decoration: none;
     margin: 0;
     padding: 0;
+}
+
+/* =============================================
+   for text-elements
+   ============================================= */
+
+@each $text-color, $index in $colorgroup {
+    .text#{$index} {
+        color: $text-color;
+    }
 }
 
 /* =============================================
@@ -245,7 +249,6 @@ body {
         display: block;
         width: 100%;
         padding: 0;
-        justify-content: right;
     }
 
 /* =============================================
@@ -274,6 +277,14 @@ body {
 @media only screen and(min-width: 80em) {
 
 /* =============================================
+   body-navbar-btn
+   ============================================= */
+
+.body-navbar-btn:checked ~ .body-navbar > .body-navbar-list{
+    display: block;
+}
+
+/* =============================================
    body-header
    ============================================= */
 
@@ -290,7 +301,7 @@ body {
     display: block;
     width: 10vw;
     float: left;
-    height: 120vh;
+    height: 100vh;
 }
 
 /* =============================================
@@ -306,10 +317,11 @@ body {
    ============================================= */
 
 .body-main {
-    position: relative;
-    top: 0;
-    width: 90%;
-    clear: right;
+    display: block;
+    float: left;
+    width: 80vw;
+    clear: none;
+    height: 80vh;
 }
 
 /* =============================================
@@ -317,8 +329,12 @@ body {
    ============================================= */
 
 .body-footer {
-    width: 90%;
-    clear: right;
+    display: block;
+    position: initial;
+    float: left;
+    width: 80vw;
+    height: 0;
+    clear: none;
 }
 
 }

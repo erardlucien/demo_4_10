@@ -169,6 +169,12 @@ body {
   display: block;
   color: white;
   padding: 1em;
+  width: 6em;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .navbar-link:hover {
@@ -222,6 +228,12 @@ body {
     float: left;
   }
   /* =============================================
+   logo
+   ============================================= */
+  .logo {
+    padding: 1em;
+  }
+  /* =============================================
    body-navbar
    ============================================= */
   .body-navbar {
@@ -245,14 +257,14 @@ body {
    ============================================= */
   .navbar-link {
     display: block;
-    padding: 2em;
+    padding: 1em;
   }
 }
 
 /* =============================================
    for screen 80em
    ============================================= */
-@media only screen and (min-width: 80em) {
+@media only screen and (min-width: 64em) {
   /* =============================================
    body-navbar-btn
    ============================================= */
@@ -264,7 +276,15 @@ body {
    ============================================= */
   .body-header {
     float: none;
+    padding: 2em 0;
     width: 10vw;
+  }
+  /* =============================================
+   logo
+   ============================================= */
+  .logo {
+    text-align: center;
+    padding: 0;
   }
   /* =============================================
    body-navbar
@@ -280,6 +300,15 @@ body {
    ============================================= */
   .body-navbar-list {
     display: block;
+  }
+  /* =============================================
+   navbar-link
+   ============================================= */
+  .navbar-link {
+    display: block;
+    color: white;
+    padding: 1em;
+    width: auto;
   }
   /* =============================================
    body-main

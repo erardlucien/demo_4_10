@@ -6,9 +6,10 @@ $hover-color: #456dff;
 $bgd-color: #345600; // bgd:=background-color
 $spacing-padding: 2em;
 $color1: red;
-$color2: lighten(green, 40%);
+$color2: lighten(green, 7%);
 $color3: darken(blue, 10%);
-$colorgroup: $color1 1, $color2 2, $color3 3;
+$color4: darken(cyan, 20%);
+$colorgroup: $color1 1 45%, $color2 2 40%, $color3 3 30%, $color4 4 20%;
 
 // part of css
 
@@ -54,9 +55,11 @@ body {
    for text-elements
    ============================================= */
 
-@each $text-color, $index in $colorgroup {
+@each $text-color, $index, $pourcentage in $colorgroup {
     .text#{$index} {
         color: $text-color;
+        background: lighten($text-color, $pourcentage);
+        margin: 1.3rem;
     }
 }
 
@@ -206,14 +209,24 @@ body {
 }
 
 /* =============================================
+   text4-element
+   ============================================= */
+
+.text4-element {
+    background: lighten(white, 12%);
+    padding: 1.5rem;
+    margin: 1.4rem 0;
+}
+
+/* =============================================
    body-footer
    ============================================= */
 
 .body-footer {
-    clear: both;
-    position: relative;
-    top: 77vh;
     text-align: center;
+    width: 100%;
+    background: darken(aqua, 30%);
+    padding: 1.5rem;
 }
 
 /* =============================================
@@ -281,94 +294,4 @@ body {
        display: block;
        padding: $spacing-padding - 1em;
    }
-}
-
-/* =============================================
-   for screen 64em
-   ============================================= */
-
-@media only screen and(min-width: 64em) {
-
-/* =============================================
-   body-navbar-btn
-   ============================================= */
-
-.body-navbar-btn:checked ~ .body-navbar > .body-navbar-list{
-    display: block;
-}
-
-/* =============================================
-   body-header
-   ============================================= */
-
-.body-header {
-    float: none;
-    padding: $spacing-padding 0;
-    width: 10vw;
-}
-
-/* =============================================
-   logo
-   ============================================= */
-
-.logo {
-    text-align: center;
-    padding: 0;
-}
-
-/* =============================================
-   body-navbar
-   ============================================= */
-
-.body-navbar {
-    display: block;
-    width: 10vw;
-    float: left;
-    height: 100vh;
-}
-
-/* =============================================
-   body-navbar-list
-   ============================================= */
-
-.body-navbar-list {
-    display: block;
-}
-
-/* =============================================
-   navbar-link
-   ============================================= */
-
-.navbar-link {
-    display: block;
-    color: $color;
-    padding: $spacing-padding - 1em;
-    width: auto;
-}
-
-/* =============================================
-   body-main
-   ============================================= */
-
-.body-main {
-    display: block;
-    float: left;
-    width: 80vw;
-    clear: none;
-    height: 80vh;
-}
-
-/* =============================================
-   body-footer
-   ============================================= */
-
-.body-footer {
-    display: block;
-    position: initial;
-    float: left;
-    width: 80vw;
-    height: 0;
-    clear: none;
-}
-
 }

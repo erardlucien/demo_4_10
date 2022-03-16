@@ -213,7 +213,7 @@ body {
    ============================================= */
 
 .text4-element {
-    background: lighten(white, 12%);
+    background: lighten(gray, 40%);
     padding: 1.5rem;
     margin: 1.4rem 0;
 }
@@ -224,7 +224,6 @@ body {
 
 .body-footer {
     text-align: center;
-    width: 100%;
     background: darken(aqua, 30%);
     padding: 1.5rem;
 }
@@ -273,7 +272,6 @@ body {
 
     .body-navbar {
         display: block;
-        width: 100%;
         padding: 0;
     }
 

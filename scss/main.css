@@ -195,6 +195,38 @@ body {
 }
 
 /* =============================================
+   animation-section
+   ============================================= */
+.animation-section {
+  display: block;
+  margin: 5rem;
+}
+
+/* =============================================
+   rotate-element
+   ============================================= */
+.rotate-element {
+  display: block;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 2rem;
+  background: red;
+  animation-name: rotate-endless;
+  animation-timing-function: linear;
+  animation-duration: 0.8s;
+  animation-delay: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate-endless {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =============================================
    text4-element
    ============================================= */
 .text4-element {
@@ -266,6 +298,27 @@ body {
   .navbar-link {
     display: block;
     padding: 1em;
+    z-index: 0;
+  }
+
+  .navbar-link::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform: scaleX(0%);
+    z-index: -1;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .navbar-link:hover::before {
+    display: block;
+    transform: scaleX(20%);
+    background: #00cd00;
   }
 }
 
